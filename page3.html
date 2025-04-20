@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <h1><a href="index.html">AURA</a></h1>
+
+    <div class="navbar-links">
+      <a href="index.html">HOME</a>
+      <a href="page1.html">COLLECTIONS</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACTS</a>
+    </div>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+
+    <div class="navbar-menu-toggle">
+      <i class="fa-solid fa-bars" onclick="shownavbar()"></i>
+    </div>
+  </nav>
+
+
+  <!-- Side Navbar (Mobile) -->
+  <nav class="side-navbar">
+
+    <div class="side-navbar-close">
+      <i class="fa-solid fa-xmark" onclick="closenavbar()"></i>
+    </div>
+
+    <div class="side-navbar-links">
+      <a href="#">HOME</a>
+      <a href="collections.html">COLLECTIONS</a>
+      <a href="aboutus.html">ABOUT US</a>
+      <a href="contacts.html">CONTACTS</a>
+    </div>
+  </nav>
+
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search products..." onkeyup="searchProducts()">
+    <i class="fa-brands fa-searchengin" id="search-icon"></i>
+  </div>
+
+  <div class="new-arrivals">
+    <div class="new-arrivals-container">
+      <img src="https://m.media-amazon.com/images/I/71RlOgFT-wL._SY625_.jpg" alt="New Jacket Style">
+      <h4>Longwalk Women's Boot19619 Boots</h4>
+      <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+
+    <div class="new-arrivals-container">
+        <img src="https://m.media-amazon.com/images/I/51Jr+aM9TNL._SY625_.jpg" alt="New Jacket Style">
+        <h4>commander shoes Casual and Latest Fashionable Pumps for Girls and Women (514)</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://m.media-amazon.com/images/I/71CcLka3z-L._SY625_.jpg" alt="New Jacket Style">
+        <h4>Commander Women's Classic Boot (White_5 UK)</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://m.media-amazon.com/images/I/614lufX7ssL._SY625_.jpg" alt="New Jacket Style">
+        <h4>FURIOZZ Stylish Casual Boots For Women's And Girls AmazonPN7</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20230925/E5Af/6511795cafa4cf41f503a53f/-473Wx593H-466573546-black-MODEL.jpg" alt="New Jacket Style">
+        <h4>Slip-On Open-Toe Chunky Heeled Sandals
+        </h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://stylestryproductionwls47sou4z.cdn.e2enetworks.net/images/products/medium/471501f72718b68b3d4fc971734a8f2806f42bed.webp" alt="New Jacket Style">
+        <h4>Shoetopia Rhinestone Decor Point Toe Ankle Strap Black Ballet Flats
+        </h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://cdn.streetstylestore.com/2/7/9/3/0/8/279308-vertical_default.webp" alt="New Jacket Style">
+        <h4>Burgundy Muse Pointed Heels
+        </h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/0/4/04d0ecfBelly443Black_1.jpg?rnd=20200526195200&tr=w-512" alt="New Jacket Style">
+        <h4>Pointed Toe Black Pumps for Women
+        </h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pages">
+    <div class="page-no" id="pagination">
+      <!-- JS will populate this -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>AURA</h4>
+        <p>Fashion that defines you. Stay trendy, stay unique.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page1.html">New Arrivals</a></li>
+          <li><a href="#">Most Wanted</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 AURA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>

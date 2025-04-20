@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <h1><a href="index.html">AURA</a></h1>
+
+    <div class="navbar-links">
+      <a href="index.html">HOME</a>
+      <a href="page1.html">COLLECTIONS</a>
+      <a href="aboutus.html">ABOUT US</a>
+      <a href="contacts.html">CONTACTS</a>
+    </div>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+
+    <div class="navbar-menu-toggle">
+      <i class="fa-solid fa-bars" onclick="shownavbar()"></i>
+    </div>
+  </nav>
+
+
+  <!-- Side Navbar (Mobile) -->
+  <nav class="side-navbar">
+    <div class="side-navbar-close">
+      <i class="fa-solid fa-xmark" onclick="closenavbar()"></i>
+    </div>
+    <div class="side-navbar-links">
+      <a href="#">HOME</a>
+      <a href="collections.html">COLLECTIONS</a>
+      <a href="aboutus.html">ABOUT US</a>
+      <a href="contacts.html">CONTACTS</a>
+    </div>
+  </nav>
+
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search products..." onkeyup="searchProducts()">
+      <i class="fa-brands fa-searchengin" id="search-icon"></i>
+    </div>
+   
+
+
+  <div class="new-arrivals">
+      <div class="new-arrivals-container">
+        <img src="https://m.media-amazon.com/images/I/41NRL0LE4+L.jpg" alt="El Regalo 3-piece Ear Cuff Earrings Set for Girls and Women">
+        <h4>El Regalo 3 PCs Ear Cuff Earrings (Pierced & Non-Pierced) for Girls & Women</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    
+      <div class="new-arrivals-container">
+        <img src="https://m.media-amazon.com/images/I/61ieFJvt4ZL._SY575_.jpg" alt="2-piece Zircon Butterfly Ear Cuff Earrings for Women">
+        <h4>2Pcs Zircon Butterfly Ear Cuff Earrings for Women</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    
+      <div class="new-arrivals-container">
+        <img src="https://m.media-amazon.com/images/I/61KNv70DkSL._SY575_.jpg" alt="GIVA 925 Silver Rose Gold Halo Drop Earrings with Certificate">
+        <h4>GIVA 925 Silverrose Gold Halo Drop Earrings</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    
+      <div class="new-arrivals-container">
+        <img src="https://m.media-amazon.com/images/I/51mw9uU5h4L._SY575_.jpg" alt="Clara 925 Sterling Silver Pendant Earring Chain Jewellery Set">
+        <h4>Clara 925 Sterling Silver Agda Pendant Earring Chain Jewellery Set</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://everstylish.com/media/catalog/product/cache/fc1e90810f81d5d5f869fad087b9d639/j/e/jew1102980-1_1.jpg" alt="New Jacket Style">
+        <h4>A Classy Delight - Statement Enamelled Earrings</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://everstylish.com/media/catalog/product/cache/fc1e90810f81d5d5f869fad087b9d639/j/e/jew1102821-2_1.jpg" alt="New Jacket Style">
+        <h4>The Mesmerisingly Chic Statement Makers- Enamelled Pearl Earrings (Blush Pink)
+        </h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://everstylish.com/media/catalog/product/cache/fc1e90810f81d5d5f869fad087b9d639/j/e/jew1102979-3.jpg" alt="New Jacket Style">
+        <h4>The Bewitching Butterflies - Statement Enamelled Studs</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://everstylish.com/media/catalog/product/cache/fc1e90810f81d5d5f869fad087b9d639/j/e/jew1105659-11.jpg" alt="New Jacket Style">
+        <h4>ONCE UPON A SQUARE - GOLDEN ENAMELLED EARRINGS (WHITE)</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://everstylish.com/media/catalog/product/cache/fc1e90810f81d5d5f869fad087b9d639/j/e/jew221021_zoom.jpg" alt="New Jacket Style">
+        <h4>Gorgeous pearl embedded in golden triangle earrings
+        </h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+
+      <div class="new-arrivals-container">
+        <img src="https://everstylish.com/media/catalog/product/cache/fc1e90810f81d5d5f869fad087b9d639/j/e/jew1103809-1.jpg" alt="New Jacket Style">
+        <h4>PETALS PANACHE- GOLDEN ENAMELLED EARRINGS (DENIM BLUE)
+        </h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+
+      <div class="new-arrivals-container">
+        <img src="https://everstylish.com/media/catalog/product/cache/fc1e90810f81d5d5f869fad087b9d639/j/e/jew221129-m1.jpg" alt="New Jacket Style">
+        <h4>The modern girl’s intriguing artistic ear-jackets</h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <div class="new-arrivals-container">
+        <img src="https://everstylish.com/media/catalog/product/cache/fc1e90810f81d5d5f869fad087b9d639/j/e/jew220933-3.jpg" alt="New Jacket Style">
+        <h4>Mirror reflection- pearl in a cage of gold earrings
+        </h4>
+        <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      
+
+    </div>
+  </div>
+
+
+  <div class="pages">
+    <div class="page-no" id="pagination">
+      <!-- JS will populate this -->
+    </div>
+  </div>
+  
+        
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>AURA</h4>
+        <p>Fashion that defines you. Stay trendy, stay unique.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page1.html">New Arrivals</a></li>
+          <li><a href="#">Most Wanted</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 AURA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>

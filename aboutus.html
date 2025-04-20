@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <h1><a href="index.html">AURA</a></h1>
+
+    <div class="navbar-links">
+      <a href="index.html">HOME</a>
+      <a href="page1.html">COLLECTIONS</a>
+      <a href="contacts.html">CONTACTS</a>
+    </div>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+
+    <div class="navbar-menu-toggle">
+      <i class="fa-solid fa-bars" onclick="shownavbar()"></i>
+    </div>
+  </nav>
+
+
+  <!-- Side Navbar (Mobile) -->
+  <nav class="side-navbar">
+
+    <div class="side-navbar-close">
+      <i class="fa-solid fa-xmark" onclick="closenavbar()"></i>
+    </div>
+
+    <div class="side-navbar-links">
+      <a href="index.html">HOME</a>
+      <a href="collections.html">COLLECTIONS</a>
+      <a href="aboutus.html">ABOUT US</a>
+      <a href="contacts.html">CONTACTS</a>
+    </div>
+  </nav>
+
+
+
+  <div class="about-us">
+    <h1>About Us</h1>
+    <h3>Welcome to Aura – Where Every Style Finds Its Soul.</h3>
+    <p>Aura isn’t just a fashion brand — it’s a movement. We blend the boldness of streetwear, the elegance of luxury, the calm of minimalism, the creativity of boho, and the heart of sustainability into collections that speak to the modern spirit.</p>
+    <p>We believe fashion should never box you in. That’s why we create pieces that flow with your mood — whether you're vibing with edgy street fits, elevating your wardrobe with timeless classics, or keeping it cool with clean, conscious design.</p>
+    <p>Every product we curate is rooted in quality, individuality, and care for the planet. Aura is committed to sustainable practices, ethical sourcing, and celebrating diverse self-expression. No matter your style story, we’re here to help you write it — your way.</p>
+    <h3><strong>Aura is more than what you wear. It’s who you are.</strong></h3>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>AURA</h3>
+        <p>Fashion that defines you. Stay trendy, stay unique.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page1.html">New Arrivals</a></li>
+          <li><a href="page1.html">Most Wanted</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 AURA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <h1><a href="index.html">AURA</a></h1>
+
+    <div class="navbar-links">
+      <a href="index.html">HOME</a>
+      <a href="page1.html">COLLECTIONS</a>
+      <a href="aboutus.html">ABOUT US</a>
+    </div>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+
+    <div class="navbar-menu-toggle">
+      <i class="fa-solid fa-bars" onclick="shownavbar()"></i>
+    </div>
+  </nav>
+
+
+  <!-- Side Navbar (Mobile) -->
+  <nav class="side-navbar">
+
+    <div class="side-navbar-links">
+      <a href="#">HOME</a>
+      <a href="collections.html">COLLECTIONS</a>
+      <a href="aboutus.html">ABOUT US</a>
+    </div>
+  </nav>
+
+
+  <h1 class="contact-title">Contact Us</h1>
+<form class="contact-us">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="contact">Contact Number:</label>
+    <input type="text" id="contact" name="contact" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">How may we help you:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>AURA</h3>
+        <p>Fashion that defines you. Stay trendy, stay unique.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page1.html">New Arrivals</a></li>
+          <li><a href="page1.html">Most Wanted</a></li>
+          <li><a href="aboutus.html"></a>About Us</li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 AURA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>

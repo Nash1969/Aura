@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <h1><a href="index.html">AURA</a></h1>
+
+    <div class="navbar-links">
+      <a href="index.html">HOME</a>
+      <a href="page1.html">COLLECTIONS</a>
+      <a href="aboutus.html">ABOUT US</a>
+      <a href="contacts.html">CONTACTS</a>
+    </div>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+
+    <div class="navbar-menu-toggle">
+      <i class="fa-solid fa-bars" onclick="shownavbar()"></i>
+    </div>
+  </nav>
+
+  <!-- Side Navbar (Mobile) -->
+  <nav class="side-navbar">
+    <div class="side-navbar-close">
+      <i class="fa-solid fa-xmark" onclick="closenavbar()"></i>
+    </div>
+    <div class="side-navbar-links">
+      <a href="#">HOME</a>
+      <a href="collections.html">COLLECTIONS</a>
+      <a href="aboutus.html">ABOUT US</a>
+      <a href="contacts.html">CONTACTS</a>
+    </div>
+  </nav>
+
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search products..." onkeyup="searchProducts()">
+    <i class="fa-brands fa-searchengin" id="search-icon" style="color: #ff4081;"></i>
+  </div>
+
+  <div id="no-results" style="display: none;">No products found.</div>
+
+
+  <!-- inside .new-arrivals -->
+   <div class="new-arrivals">
+<div class="new-arrivals-container">
+  <img src="https://littleboxindia.com/cdn/shop/products/Ruffle_Cami_Maxi_Dress_In_Black_460x.jpg?v=1741074498" alt="Ruffle Cami Maxi Dress in Black on hanger">
+  <h4>Ruffle Cami Maxi Dress In Black</h4>
+  <button>Shop Now<i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+
+<div class="new-arrivals-container">
+  <img src="https://littleboxindia.com/cdn/shop/files/c123af43f5cd2b1c720be69128306e99_460x.webp?v=1744958180" alt="Striped Blue Shirt Collar Contrast Black Mini Dress displayed on mannequin">
+  <h4>Striped Blue Shirt Collar Contrast Black Mini Dress</h4>
+  <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+
+<div class="new-arrivals-container">
+  <img src="https://littleboxindia.com/cdn/shop/files/35f8962ff089726e030b856d25a810f2_720x.webp?v=1744287192" alt="Solid Ruched Round Neck Crop Top in Navy color">
+  <h4>Solid Ruched Round Neck Crop Top In Navy</h4>
+  <button>Shop Now<i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+
+<div class="new-arrivals-container">
+  <img src="https://littleboxindia.com/cdn/shop/files/Side_Striped_Bowknot_Sweatshirt_Solid_Cropped_Cami_Top_460x.webp?v=1743663875" alt="Side Striped Bowknot Sweatshirt paired with Solid Cropped Cami Top">
+  <h4>Side Striped Bowknot Sweatshirt & Solid Cropped Cami Top</h4>
+  <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+
+<div class="new-arrivals-container">
+  <img src="https://littleboxindia.com/cdn/shop/files/Mesh_Cowl_Neck_Ruched_Split_Red_Midi_Dress_460x.jpg?v=1741076484" alt="Mesh Cowl Neck Ruched Split Red Midi Dress laid flat">
+  <h4>Mesh Cowl Neck Ruched Split Red Midi Dress</h4>
+  <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+
+<div class="new-arrivals-container">
+  <img src="https://littleboxindia.com/cdn/shop/files/High_Neck_Solid_Twist_Ruched_Split_Maxi_Dress_460x.jpg?v=1741077968" alt="High Neck Solid Twist Ruched Split Maxi Dress displayed on model">
+  <h4>High Neck Solid Twist Ruched Split Maxi Dress</h4>
+  <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+
+<div class="new-arrivals-container">
+  <img src="https://littleboxindia.com/cdn/shop/files/Color_Block_Knitted_Tight-fitting_T-shirt_With_Contrast_Collar_460x.jpg?v=1742883663" alt="Color Block Knitted Tight-fitting T-shirt with black contrast collar">
+  <h4>Color Block Knitted Tight-fitting T-shirt With Contrast Collar</h4>
+  <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+
+<div class="new-arrivals-container">
+  <img src="https://littleboxindia.com/cdn/shop/files/front_view_High-Low_Ruffled_Layered_Drawstring_Black_Skirt_460x.webp?v=1742277263" alt="Front view of High-Low Ruffled Layered Drawstring Black Skirt">
+  <h4>High-Low Ruffled Layered Drawstring Black Skirt</h4>
+  <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+</div>
+</div>
+
+<div class="pages">
+  <div class="page-no" id="pagination">
+    <!-- JS will populate this -->
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>AURA</h3>
+        <p>Fashion that defines you. Stay trendy, stay unique.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page1.html">New Arrivals</a></li>
+          <li><a href="page1.html">Most Wanted</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 AURA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>

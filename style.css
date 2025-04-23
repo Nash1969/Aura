@@ -17,7 +17,6 @@ body.dark-theme {
   --bg-color: #121212;
 }
 
-
 /*=============================
 =          RESET              =
 =============================*/
@@ -46,46 +45,72 @@ a {
 /*=============================
 =           NAVBAR            =
 =============================*/
-.navbar {
+.navbar{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 15px;
 }
 
-.navbar h1 {
-  font-size: 1.8rem;
+.navbar h1 a{
+  color: var(--accent-color);
+  font-size: 1.25em;
 }
 
-.navbar-links {
-  display: flex;
-  align-items: center;
+.navbar-links{
+  position: absolute;
+  right: 9em;
+  padding-top: 11px;
 }
 
-.navbar-links a {
-  margin: 0 1rem;
-  font-weight: 500;
+.navbar-links a{
+  padding-left: 20px;
+  font-size: 1.25em;
 }
-
-.navbar a:hover {
+.navbar-links a:hover{
   color: var(--accent-color);
 }
 
-.theme-toggle i {
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-left: 1rem;
+.theme-toggle{
+  position: absolute;
+  right: 3.5em;
+  font-size: 1.25em;
+  padding-top: 10px;
+}
+.theme-toggle:hover{
+  color: var(--accent-color);
 }
 
-.navbar-menu-toggle {
-  display: none;
-  cursor: pointer;
+.admin{
+  position: absolute;
+  right: 5.5em;
+  font-size: 1.25em;
+  padding-top: 10px;
 }
+.admin  :hover{
+  color: var(--accent-color);
+}
+
+.navbar-menu-toggle{
+  font-size: 1.25em;
+  padding-top: 10px;
+}
+
+.navbar-menu-toggle:hover{
+  color: var(--accent-color);
+}
+
+.side-navbar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 23%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
 
 
 /*=============================
@@ -131,7 +156,7 @@ a {
 
 
 /*=============================
-=         SIDE NAVBAR         =
+=         Theme Toggle        =
 =============================*/
 /* Theme Toggle Styles */
 body {
@@ -161,32 +186,45 @@ body.dark-theme {
   margin-left: 1rem;
 }
 
-/* Responsive Mobile Nav */
-.side-navbar {
+/*=============================
+=         SIDE NAVBAR         =
+=============================*/
+/*  SIDE-NAVBAR */
+.side-navbar{
   position: fixed;
+  background-color: var(--primary-color);
   top: 0;
   left: -100%;
-  height: 100vh;
-  width: 250px;
-  background-color: #fff;
-  padding: 1rem;
-  transition: left 0.3s ease-in-out;
-  z-index: 999;
+  width: 23%;
 }
 
-.side-navbar-links a {
-  display: block;
-  padding: 1rem 0;
-  font-weight: 600;
-  color: #111;
+.side-navbar-links a{
+  display: flex;
+  border-style: solid;
+  border-color: var(--accent-color);
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+  border-width: 1px;
+  font-size: 1.25em;
+  padding-top: 15px;
+}
+
+.side-navbar-links a:hover{
+  color: var(--accent-color);
 }
 
 .side-navbar-close {
   text-align: right;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  position: relative;
+  margin: 1em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  font-size: 1.25em;
   cursor: pointer;
 }
+
+
 
 /* Hamburger menu hidden on desktop */
 .navbar-menu-toggle {
@@ -717,7 +755,7 @@ h2 {
     right: -100%;
     width: 60%;
     height: 100%;
-    background-color: var(--bg);
+    background-color: var(--primary-color);
     transition: 0.3s ease;
     z-index: 999;
     padding: 2rem;
@@ -731,11 +769,16 @@ h2 {
     display: block;
     margin: 1rem 0;
     font-size: 1.2rem;
+    color:#f9f9f9;
+  }
+
+  .side-navbar-close {
+    color: #f9f9f9;
   }
 
   /* HEADER SECTION */
   .header {
-    flex-direction: column;
+    flex-direction: inline;
     text-align: center;
     padding: 2rem 1rem;
   }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle">
+            <i class="bx bx-moon"></i>
+            <i class="bx bx-sun"></i>
+        </label>
+    </div>
+
+    <!-- Wrapper for Centering Login Form -->
+    <div class="wrapper">
+        <!-- Login Box -->
+        <div class="login-box">
+            <!-- Login Header -->
+            <div class="login-header">
+                <span>Login</span>
+            </div>
+
+            <!-- Login Form -->
+            <form action="index.html">
+                <!-- Email Input Box -->
+                <div class="input-box">
+                    <i class="icon bx bx-user"></i>
+                    <input type="email" class="input-field" id="email" placeholder="Email" required>
+                    <label for="email" class="label">Email</label>
+                </div>
+
+                <!-- Password Input Box -->
+                <div class="input-box">
+                    <i class="icon bx bx-lock"></i>
+                    <input type="password" class="input-field" id="password" placeholder="Password" required>
+                    <label for="password" class="label">Password</label>
+                    <span class="show-password bx bx-show" onclick="togglePasswordVisibility()"></span>
+                </div>
+
+                <!-- Remember Me and Forgot Password -->
+                <div class="remember-forget">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <div class="forget">
+                        <a href="forgotpassword.html">Forgot Password?</a>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="input-submit">Login</button>
+
+                <!-- Register Section -->
+                <div class="register">
+                    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.9/boxicons.min.js"></script> -->
+    <script>
+        // Toggle Password Visibility
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById('password');
+            const icon = document.querySelector('.show-password');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                icon.classList.remove('bx-show');
+                icon.classList.add('bx-hide');
+            } else {
+                passwordField.type = 'password';
+                icon.classList.remove('bx-hide');
+                icon.classList.add('bx-show');
+            }
+        }
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('change', function () {
+            document.body.classList.toggle('dark', themeToggle.checked);
+        });
+    </script>
+</body>
+</html>

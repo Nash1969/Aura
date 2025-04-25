@@ -2,80 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Register - AURA</title>
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="signup.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA | Register</title>
+  <link rel="stylesheet" href="signup.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <!-- Theme Toggle Button -->
   <div class="theme-toggle">
-    <input type="checkbox" id="theme-switch">
-    <label for="theme-switch">
+    <input type="checkbox" id="toggle-theme">
+    <label for="toggle-theme">
       <i class='bx bx-sun'></i>
       <i class='bx bx-moon'></i>
     </label>
   </div>
 
-  <!-- Wrapper -->
+  <a href="index.html" class="home-btn">
+    <i class='bx bx-home'></i>
+  </a>
+  
+  <!-- Registration Wrapper -->
   <div class="wrapper">
     <div class="register-box">
+      <!-- Header -->
       <div class="register-header">
         <span>Register</span>
       </div>
 
-      <form action="#" method="post">
+      <!-- Form -->
+      <form action="#">
+        <!-- Username -->
         <div class="input-box">
-          <input type="text" required placeholder=" " class="input-field" />
-          <label class="label">Full Name</label>
+          <input type="text" id="username" class="input-field" placeholder=" " required />
+          <label for="username" class="label">Username</label>
           <i class='bx bx-user icon'></i>
         </div>
 
+        <!-- Email -->
         <div class="input-box">
-          <input type="email" required placeholder=" " class="input-field" />
-          <label class="label">Email</label>
+          <input type="email" id="email" class="input-field" placeholder=" " required />
+          <label for="email" class="label">Email</label>
           <i class='bx bx-envelope icon'></i>
         </div>
 
+        <!-- Password -->
         <div class="input-box">
-          <input type="password" required placeholder=" " class="input-field password" id="password" />
-          <label class="label">Password</label>
+          <input type="password" id="password" class="input-field" placeholder=" " required />
+          <label for="password" class="label">Password</label>
+          <i class='bx bx-lock icon'></i>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="input-box">
+          <input type="password" id="confirm-password" class="input-field" placeholder=" " required />
+          <label for="confirm-password" class="label">Confirm Password</label>
           <i class='bx bx-lock-alt icon'></i>
         </div>
 
-        <div class="input-box">
-          <input type="password" required placeholder=" " class="input-field password" id="confirm-password" />
-          <label class="label">Confirm Password</label>
-          <i class='bx bx-lock-alt icon'></i>
-        </div>
-
+        <!-- Show Password Toggle -->
         <div class="show-password">
-          <input type="checkbox" id="show-password">
-          <label for="show-password">Show Password</label>
+          <input type="checkbox" id="show-pass">
+          <label for="show-pass">Show Password</label>
         </div>
 
+        <!-- Submit Button -->
         <button type="submit" class="input-submit">Create Account</button>
 
+        <!-- Already Registered -->
         <div class="login-link">
-          <p>Already have an account? <a href="login.html">Login here</a></p>
+          Already have an account? <a href="login.html">Login here</a>
         </div>
       </form>
     </div>
   </div>
 
   <script>
-    // Theme toggle
-    const switchBtn = document.getElementById('theme-switch');
-    switchBtn.addEventListener('change', () => {
-      document.body.classList.toggle('dark');
+    const toggleTheme = document.getElementById("toggle-theme");
+    toggleTheme.addEventListener("change", () => {
+      document.body.classList.toggle("dark");
     });
 
-    // Show/hide password
-    document.getElementById('show-password').addEventListener('change', function () {
-      const pwFields = document.querySelectorAll('.password');
-      pwFields.forEach(field => {
-        field.type = this.checked ? 'text' : 'password';
-      });
+    const showPass = document.getElementById("show-pass");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirm-password");
+
+    showPass.addEventListener("change", () => {
+      const type = showPass.checked ? "text" : "password";
+      password.type = type;
+      confirmPassword.type = type;
     });
   </script>
 </body>

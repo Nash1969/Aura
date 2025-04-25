@@ -60,37 +60,6 @@ function searchProducts() {
   }
 }
 
-
-// ===============================
-// 4. Header Gallery with Indicators
-// ===============================
-const gallery = document.querySelector('.header-gallery');
-const indicatorsContainer = document.querySelector('.gallery-indicators');
-const images = document.querySelectorAll('.header-img');
-
-function scrollGallery(amount) {
-  gallery.scrollBy({
-    left: amount,
-    behavior: 'smooth'
-  });
-}
-
-// Function to scroll the gallery
-function scrollGallery(amount) {
-  const gallery = document.querySelector('.header-gallery');
-  gallery.scrollLeft += amount;  // Scroll the gallery by the specified amount
-}
-
-// Autoplay functionality for the gallery
-let autoplayInterval = setInterval(() => {
-  scrollGallery(300);  // Scroll right every 3 seconds
-}, 3000);
-
-// Toggle dark mode
-function toggleTheme() {
-  document.body.classList.toggle('dark-theme');
-}
-
 // ===============================
 // 5. Pagination Functionality
 // ===============================

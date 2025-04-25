@@ -18,7 +18,7 @@
 
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
   <!-- Top Navbar -->
@@ -26,14 +26,22 @@
     <h1><a href="index.html">AURA</a></h1>
 
     <div class="navbar-links">
-      <a href="index.html">HOME</a>
+      <a href="main.html">HOME</a>
       <a href="page1.html">COLLECTIONS</a>
       <a href="aboutus.html">ABOUT US</a>
       <a href="contacts.html">CONTACTS</a>
     </div>
 
+    <div class="admin">
+      <a href="login.html">
+        <i class="fa-regular fa-user"></i>
+      </a>
+    </div>
+
+
     <div class="theme-toggle" onclick="toggleTheme()">
-      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-moon show-on-light"></i>
+      <i class="fa-solid fa-sun show-on-dark" style="display: none"></i>
     </div>
 
     <div class="navbar-menu-toggle">
@@ -47,7 +55,7 @@
       <i class="fa-solid fa-xmark" onclick="closenavbar()"></i>
     </div>
     <div class="side-navbar-links">
-      <a href="#">HOME</a>
+      <a href="main.html">HOME</a>
       <a href="collections.html">COLLECTIONS</a>
       <a href="aboutus.html">ABOUT US</a>
       <a href="contacts.html">CONTACTS</a>
@@ -131,7 +139,7 @@
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="main.html">Home</a></li>
           <li><a href="page1.html">New Arrivals</a></li>
           <li><a href="page1.html">Most Wanted</a></li>
           <li><a href="aboutus.html">ABOUT US</a></li>
@@ -156,6 +164,6 @@
   </footer>
 
   <!-- JS Script -->
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

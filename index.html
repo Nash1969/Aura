@@ -1,225 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AURA</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
 <body>
-  <!-- Top Navbar -->
-  <nav class="navbar">
-    <h1><a href="index.html">AURA</a></h1>
-
-    <div class="navbar-links">
-      <a href="index.html">HOME</a>
-      <a href="page1.html">COLLECTIONS</a>
-      <a href="aboutus.html">ABOUT US</a>
-      <a href="contacts.html">CONTACTS</a>
-    </div>
-
-
-    <div class="admin">
-      <a href="login.html">
-        <i class="fa-regular fa-user"></i>
-      </a>
-    </div>
-    
-  
-
-    <div class="theme-toggle" onclick="toggleTheme()">
-      <i class="fa-solid fa-moon show-on-light"></i>
-      <i class="fa-solid fa-sun show-on-dark" style="display: none;"></i>
-    </div>
-    
-    <div class="navbar-menu-toggle">
-      <i class="fa-solid fa-bars" onclick="shownavbar()"></i>
-    </div>
-  </nav>
-
-  
-  <!-- Side Navbar (Mobile) -->
-  <nav class="side-navbar">
-    <div class="side-navbar-close">
-      <i class="fa-solid fa-xmark" onclick="closenavbar()"></i>
-    </div>
-    <div class="side-navbar-links">
-      <a href="index.html">HOME</a>
-      <a href="page1.html">COLLECTIONS</a>
-      <a href="aboutus.html">ABOUT US</a>
-      <a href="contacts.html">CONTACTS</a>
-    </div>
-    
-  </nav>
-  
-
-  <!--Header -->
-  <div class="header">
-    <div class="front-text">
-      <h1>Level up your style</h1>
-      <p>with our</p><h1 style="color: #ff4081 ;">AURA</h1> 
-      <button class="header-button">Shop Now</button>
-    </div>
-  
-    <div class="header-gallery">
-      <!-- <button class="scroll-button left" onclick="scrollGallery(-300)">←</button> -->
-      <img class="header-img" src="https://images.unsplash.com/photo-1575647662261-d6c380d85547?q=80&w=300&auto=format&fit=crop" alt="Fashion Model 1">
-      <img class="header-img" src="https://images.unsplash.com/photo-1549108949-89cd83414d5a?q=80&w=300&auto=format&fit=crop" alt="Fashion Model 2">
-      <img class="header-img" src="https://plus.unsplash.com/premium_photo-1681276170423-2c60b95094b4?q=80&w=300&auto=format&fit=crop" alt="Fashion Model 3">
-      <img class="header-img" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion Model 3">
-      <img class="header-img" src="https://images.unsplash.com/photo-1562572159-4efc207f5aff?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion Model 5">
-      <img class="header-img" src="https://images.unsplash.com/photo-1594739033447-80ab21e24b4c?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion Model 6">
-      <img class="header-img" src="https://images.unsplash.com/photo-1485231183945-fffde7cc051e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGZhc2hpb258ZW58MHwxfDB8fHww" alt="Fashion Model 7">
-      <img class="header-img" src="https://images.unsplash.com/photo-1680970202774-0432ca209c93?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion Model 8">
-      <img class="header-img" src="https://plus.unsplash.com/premium_photo-1675107359574-e3ba5f47a1a2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion Model 9">
-      <img class="header-img" src="https://images.unsplash.com/photo-1610419965999-ff462f0c27f2?q=80&w=1430&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion Model 10">
-      <!-- <button class="scroll-button right" onclick="scrollGallery(300)">→</button> -->
-    <!-- </div>
-    <div class="gallery-indicators">
-       Dots will be added here dynamically
-    </div> -->
-  </div>
-
-  </div>
-  
-
-  <!-- Services Section -->
-  <div class="service">
-    <div class="service-container-1">
-      <div>
-        <h2>We provide best</h2>
-        <h2>Customer Experience</h2>
-      </div>
-      <div>
-        <p>We ensure that our customers have a smooth and enjoyable shopping experience with AURA.</p>
-      </div>
-    </div>
-
-    <div class="service-container-2">
-      <div>
-        <i class="fa-solid fa-thumbs-up"></i>
-        <h4>Satisfaction Guarantee</h4>
-        <p>We prioritize your satisfaction by offering top-quality products and hassle-free returns if you're not happy with your purchase.</p>
-      </div>
-      <div>
-        <i class="fa-solid fa-calendar-plus"></i>
-        <h4>New Arrivals Every Day</h4>
-        <p>Discover the latest trends in fashion with fresh new styles added to our collection daily.</p>
-      </div>
-      <div>
-        <i class="fa-solid fa-truck-fast"></i>
-        <h4>Fast & Free Shipping</h4>
-        <p>Enjoy quick delivery at no extra cost. We make sure your orders reach your doorstep on time, every time.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- New Arrivals Section -->
-  <h2>New Arrivals</h2>
-  <div class="new-arrivals">
-    <div class="new-arrivals-container">
-      <img src="https://emeros.s3.amazonaws.com/media/Solid%20Jumpsuits/emeros-women-cap-sleeve-notched-collar-tie-waist-green-jumpsuit_1.jpg" alt="New Jacket Style">
-      <h4>Emeros Women Cap Sleeve Notched Collar Tie-Waist Green Jumpsuit</h4>
-      <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
-    <div class="new-arrivals-container">
-      <img src="https://emeros.s3.amazonaws.com/media/One%20Shoulder%20Dress/emeros-multicolor-cocktail-partywear-one-shoulder-maxi-dress_1.jpg" alt="Trendy Outfit">
-      <h4>Emeros Multicolor Cocktail Partywear One Shoulder Maxi Dress</h4>
-      <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
-    <div class="new-arrivals-container">
-      <img src="https://emeros.s3.amazonaws.com/media/Dresses/emeros-women-yellow-floral-printed-square-neck-strap-back-knot-frill-dress_2.jpg" alt="Fashion Set">
-      <h4>Emeros Women Yellow Floral Printed Square -Neck, Strap Back Knot Frill Dress</h4>
-      <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
-    <div class="new-arrivals-container">
-      <img src="https://emeros.s3.amazonaws.com/media/Halter%20Neck%20Top/emeros-women-black-halter-neck-styled-back-crop-top_3.jpg" alt="Classic Look">
-      <h4>Emeros Women Black Halter Neck Styled Back Crop Top</h4>
-      <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
-  </div>
-
-
-  <!-- Most Wanted Section -->
-  <h2>Most Wanted</h2>
-  <div class="most-wanted">
-    <div class="most-wanted-container">
-      <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/sweater/g/a/9/s-ptsw000006-tokyo-talkies-original-imah3uh6yfyuzvtg.jpeg?q=70&crop=false" alt="Hot Pick Jacket">
-      <h4>Women Self Design High Neck Pink Sweater</h4>
-      <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
-    <div class="most-wanted-container">
-      <img src="https://images.express.com/is/image/expressfashion/0094_07821192_0058_c001?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon" alt="Urban Fashion">
-      <h4>Piped Ribbed Crew Neck Sleeveless Midi Dress</h4>
-      <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
-    <div class="most-wanted-container">
-      <img src="https://images.express.com/is/image/expressfashion/0094_07928722_1281_f001?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon" alt="Bold Wear">
-      <h4>V-Neck Tie Waist Straight Leg Jumpsuit</h4>
-      <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
-    <div class="most-wanted-container">
-      <img src="https://images.express.com/is/image/expressfashion/0094_07800973_0058_f001?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon" alt="Stylish Outfit">
-      <h4>Crew Neck Sleeveless Drop Waist Bubble Hem Mini Dress</h4>
-      <button>Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
-  </div>
-
-  <div class="newsletter">
-    <h2>Join Our Newsletter</h2>
-    <p>Sign up for exclusive discounts and stay updated with the latest trends!</p>
-    
-    <div class="newsletter-form">
-      <input type="email" class="newsletter-input" placeholder="Enter your email" />
-      <button class="newsletter-button">Subscribe</button>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h4>AURA</h4>
-        <p>Fashion that defines you. Stay trendy, stay unique.</p>
-      </div>
-  
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="page1.html">New Arrivals</a></li>
-          <li><a href="page1.html">Most Wanted</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="contacts.html">Contact</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-section">
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+    <div class="main">
+        <div class="black"></div>
+        <div class="image">
+            <img src="https://img.freepik.com/free-photo/beautiful-woman-posing-paper_23-2148846859.jpg?t=st=1745503456~exp=1745507056~hmac=fe6cc3f1eb8322963c12dbe285f4491ff1293ba9854c149f7d2ed0efd3887eca&w=740" alt="">
         </div>
-      </div>
+        <div class="content">
+            <div class="logo">
+                <div class="text">
+                    <h4>AURA</h4>
+                </div>  
+            </div>
+            <div class="text">
+                <h1><span>Level Up Your Style With Our</span></h1>
+                <h1><span class="col">AURA</span></h1>
+                <div class="paragraph">
+                    <p class="reveal-text"></p>
+                    <a href="main.html">DISCOVER</a>
+                </div>
+            </div>
+        </div>
     </div>
-  
-    <div class="footer-bottom">
-      <p>&copy; 2025 AURA. All rights reserved.</p>
-    </div>
-  </footer>
 
-  <!-- JS Script -->
-  <script src="script.js"></script>
+    <script src="index.js"></script>
+
 </body>
 </html>
